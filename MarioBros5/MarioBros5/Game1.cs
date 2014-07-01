@@ -18,6 +18,9 @@ namespace MarioBros5
         Texture2D background, mario;
         Rectangle backgroundRect, marioRect, marioDestinationRect;
         KeyboardState ks;
+        SpriteEffects effect;
+        int index = 0;
+        float timer = 0f;
 
         public Game1()
         {
@@ -31,6 +34,7 @@ namespace MarioBros5
             //graphics.IsFullScreen = true;
             graphics.ApplyChanges();
             Content.RootDirectory = "Content";
+            this.effect = SpriteEffects.None;
         }
 
         protected override void Initialize()
@@ -50,7 +54,7 @@ namespace MarioBros5
             mario = Content.Load<Texture2D>(@"Assets\NewSuperMarioBrosSheet");
             backgroundRect = new Rectangle(0, 0, 640, 480);
             marioRect = new Rectangle(320, 395, 17, 21);
-            marioDestinationRect = new Rectangle(152, 27, 17, 21);
+            marioDestinationRect = new Rectangle(151 + this.index * 20, 99, 17, 21);
         }
 
        
@@ -61,18 +65,36 @@ namespace MarioBros5
 
         protected override void Update(GameTime gameTime)
         {
+            this.timer += 1f / 60f;
+            
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
               this.Exit();
             ks = Keyboard.GetState();
 
             if (ks.IsKeyDown(Keys.Right))
             {
+                this.effect = SpriteEffects.None;
                 marioRect.X += 1;
             }
 
             if (ks.IsKeyDown(Keys.Left))
             {
+                this.effect = SpriteEffects.FlipHorizontally;
                 marioRect.X -= 1;
+            }
+
+            //this.index += 1;
+            if (this.timer > 0.1f)
+            {
+                if (this.marioDestinationRect.X < 151 + 5 * 20)
+                {
+                    this.marioDestinationRect.X += 20;
+                }
+                else
+                {
+                    this.marioDestinationRect.X = 151;
+                }
+                this.timer = 0f;
             }
 
             base.Update(gameTime);
@@ -83,7 +105,14 @@ namespace MarioBros5
             GraphicsDevice.Clear(Color.Red);
             spriteBatch.Begin();
             spriteBatch.Draw(background, backgroundRect, Color.White);
-            spriteBatch.Draw(mario, marioRect, marioDestinationRect, Color.White);
+            spriteBatch.Draw(mario,
+                             marioRect,
+                             marioDestinationRect,
+                             Color.White,
+                             0f,
+                             Vector2.Zero,
+                             this.effect,
+                             0f);
             spriteBatch.End();
             base.Draw(gameTime);
         }
