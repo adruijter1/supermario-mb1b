@@ -1,0 +1,2 @@
+Content\Assets\super-mario-background.xnb
+Content\Assets\NewSuperMarioBrosSheet.xnb

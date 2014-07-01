@@ -1,0 +1,8 @@
+C:\Users\Arjan de Ruijter\Documents\Visual Studio 2010\Projects\2013-2014\Blok4\MB1B\MarioBros5\MarioBros5\MarioBros5\bin\x86\Debug\MarioBros5.exe
+C:\Users\Arjan de Ruijter\Documents\Visual Studio 2010\Projects\2013-2014\Blok4\MB1B\MarioBros5\MarioBros5\MarioBros5\bin\x86\Debug\MarioBros5.pdb
+C:\Users\Arjan de Ruijter\Documents\Visual Studio 2010\Projects\2013-2014\Blok4\MB1B\MarioBros5\MarioBros5\MarioBros5\obj\x86\Debug\MarioBros5.csprojResolveAssemblyReference.cache
+C:\Users\Arjan de Ruijter\Documents\Visual Studio 2010\Projects\2013-2014\Blok4\MB1B\MarioBros5\MarioBros5\MarioBros5\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Arjan de Ruijter\Documents\Visual Studio 2010\Projects\2013-2014\Blok4\MB1B\MarioBros5\MarioBros5\MarioBros5\obj\x86\Debug\MarioBros5.exe
+C:\Users\Arjan de Ruijter\Documents\Visual Studio 2010\Projects\2013-2014\Blok4\MB1B\MarioBros5\MarioBros5\MarioBros5\obj\x86\Debug\MarioBros5.pdb
+C:\Users\Arjan de Ruijter\Documents\Visual Studio 2010\Projects\2013-2014\Blok4\MB1B\MarioBros5\MarioBros5\MarioBros5\bin\x86\Debug\Content\Assets\super-mario-background.xnb
+C:\Users\Arjan de Ruijter\Documents\Visual Studio 2010\Projects\2013-2014\Blok4\MB1B\MarioBros5\MarioBros5\MarioBros5\bin\x86\Debug\Content\Assets\NewSuperMarioBrosSheet.xnb
